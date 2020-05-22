@@ -17,7 +17,9 @@ public class Address {
     /**
      * above for one to one mapping in this mapping don't need to make any change in this entity.
      */
+
     //now
+
     /**
      * one to many and
      * many to many
@@ -25,4 +27,8 @@ public class Address {
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
+
+    /**
+     * now start for many to many mapping in inshallah next day i will cover the topic
+     */
 }

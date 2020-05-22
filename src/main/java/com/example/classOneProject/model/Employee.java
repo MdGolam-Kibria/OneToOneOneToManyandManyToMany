@@ -25,9 +25,15 @@ public class Employee {
 //    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 //    @JoinColumn(name = "address_id", referencedColumnName = "id")
 //    private Address address;
+
     /**
      * for one to many mapping
      */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "employee")
     private List<Address> address;
+
+
+    /**
+     * now start for many to many mapping in inshallah next day i will cover the topic
+     */
 }
