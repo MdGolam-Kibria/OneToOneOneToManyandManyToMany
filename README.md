@@ -5,6 +5,6 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 -add many to one database mapping.<br/>
 more update comming soon..........
 
-### A sample ER Diagram for <b>one to one</b>,<b>one to many</b>,<b>many to one</b>,<b>many to many</b> database mapping.<br/>
+### A sample ER Diagram for   one to one , one to many , many to one ,  many to many. Database mapping.<br/>
 
 ![allDatabaseRelationship](https://user-images.githubusercontent.com/61331272/82706750-4b470c00-9c9c-11ea-8d77-14ea7bf706d6.png)
