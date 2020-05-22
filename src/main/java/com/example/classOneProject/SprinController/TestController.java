@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.PostConstruct;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -42,19 +43,5 @@ public class TestController {
     @ResponseBody
     public String hhh(){
         return "hello";
-    }
-
-    @PostConstruct ///ata dewer mane hosse applicatoin ta run korer sathe sathe ei method ta age run korbe.
-    public void init() {
-        Employee employee = new Employee();
-        Address address = new Address();
-        address.setCountry("bangladesh");
-        address.setCity("vola");
-        // address = addressRepository.save(address);
-        employee.setName("golam kibria");
-        employee.setAddress(address);
-        employee = employeeRepository.save(employee);
-        System.out.println("Employee ID =  " + employee.getId());
-        System.out.println("ADDRESS ID =  " + address.getId());
     }
 }
