@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
