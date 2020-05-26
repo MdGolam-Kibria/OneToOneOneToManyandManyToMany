@@ -14,28 +14,44 @@ public class DbInt {
     private final EmployeeRepository employeeRepository;
     private final AddressRepository addressRepository;
 
-
     public DbInt(EmployeeRepository employeeRepository, AddressRepository addressRepository) {
         this.employeeRepository = employeeRepository;
         this.addressRepository = addressRepository;
     }
 
+
     @PostConstruct ///ata dewer mane hosse applicatoin ta run korer sathe sathe ei method ta age run korbe.
     public void init() {
-        //for save quick test
+        //for many to many
+        Employee employee = new Employee();
+        employee.setName("anika akhi");
 
         Address address = new Address();
+        address.setCity("dhaka");
+        address.setCountry("bangladesh");
+        employee.setAddresses(Arrays.asList(address));
+
+        address.setEmployees(Arrays.asList(employee));
+        employee = employeeRepository.save(employee);
+        address = addressRepository.save(address);
+
+        System.out.println("Employee ID =  " + employee.getId());
+        System.out.println("ADDRESS ID =  " + address.getId());
+
+
+        //for one many
+      /*  Address address = new Address();
         address.setCity("dhaka");
         address.setCountry("india");
 //      address = addressRepository.save(address);
         Employee employee = new Employee();
         employee.setName("Fatema");
-        employee.setAddress(Arrays.asList(address));
+        employee.setAddresses(Arrays.asList(address));
         employee = employeeRepository.save(employee);
-        address.setEmployee(employee);
+        address.setEmployees(Arrays.asList(employee));
         addressRepository.save(address);
         System.out.println("Employee ID =  " + employee.getId());
-        System.out.println("ADDRESS ID =  " + address.getId());
+        System.out.println("ADDRESS ID =  " + address.getId());*/
 
         //for delete quick
 
@@ -65,5 +81,6 @@ public class DbInt {
 ////        Employee employee = new Employee();
 ////        employee = employeeRepository.findById(Long.valueOf(1)).get();
 ////        employeeRepository.delete(employee);
+
     }
 }

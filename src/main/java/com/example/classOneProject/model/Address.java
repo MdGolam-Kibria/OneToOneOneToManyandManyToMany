@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -26,11 +28,13 @@ public class Address {
      * one to many and
      * many to many
      */
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+//    @ManyToOne
+//    @JoinColumn(name = "employee_id")
+//    private Employee employee;
 
     /**
-     * now start for many to many mapping in inshallah next day i will cover the topic
+     * many to many mapping
      */
+    @ManyToMany(mappedBy = "addresses",fetch = FetchType.EAGER)
+    private List<Employee> employees = new ArrayList<>();
 }

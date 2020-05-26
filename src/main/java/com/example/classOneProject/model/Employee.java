@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -29,11 +30,18 @@ public class Employee {
     /**
      * for one to many mapping
      */
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "employee")
-    private List<Address> address;
+//    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "employee")
+//    private List<Address> address;
 
 
     /**
-     * now start for many to many mapping in inshallah next day i will cover the topic
+     * many to many mapping
      */
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "employee_address",
+            joinColumns = { @JoinColumn(name = "employee_id") },
+            inverseJoinColumns = { @JoinColumn(name = "address_id") }
+    )
+   private List<Address> addresses = new ArrayList<>();
 }
