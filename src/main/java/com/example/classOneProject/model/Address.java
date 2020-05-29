@@ -1,5 +1,6 @@
 package com.example.classOneProject.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,6 +36,7 @@ public class Address {
     /**
      * many to many mapping
      */
-    @ManyToMany(mappedBy = "addresses",fetch = FetchType.EAGER)//ekhane mappedBy kamne kaj kortice,ata sara o kaj kore
+    @ManyToMany(mappedBy = "addresses", fetch = FetchType.EAGER)//ekhane mappedBy kamne kaj kortice,ata sara o kaj kore
+    @JsonIgnore
     private List<Employee> employees = new ArrayList<>();
 }
