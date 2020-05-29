@@ -35,6 +35,6 @@ public class Address {
     /**
      * many to many mapping
      */
-    @ManyToMany(mappedBy = "addresses",fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "addresses",fetch = FetchType.EAGER)//ekhane mappedBy kamne kaj kortice,ata sara o kaj kore
     private List<Employee> employees = new ArrayList<>();
 }

@@ -1,7 +1,10 @@
 # OneToOneOneToManyandManyToMany
 in this repository cover one to one, one to many, many to one, one to many ,many to many spring boot database mapping.
-- add one to one database mapping.
-- add one to many database mapping.
+- learn about thymeleaf and configaretion.
+- leran one to one database mapping.
+- learn one to many database mapping.
+- learn many to many database mapping.
+- including all quick test with  @PostConstruct annotation 
 -add many to one database mapping.<br/>
 more update comming soon..........
 
