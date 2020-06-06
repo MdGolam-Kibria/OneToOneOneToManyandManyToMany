@@ -8,8 +8,8 @@ import java.util.List;
 
 @Data
 @Builder
-public class Responce {
-    @JsonInclude(JsonInclude.Include.ALWAYS)
+public class Responce {//amer server e ki ki responce thakte pare seta ekhane rekhechi.
+    @JsonInclude(JsonInclude.Include.ALWAYS)//Responce failure or success jai hok na keno si data thakbe json e ;
     private long timestamp;
     @JsonInclude(JsonInclude.Include.ALWAYS)
     private int statusCode;
@@ -17,7 +17,7 @@ public class Responce {
     private String status;
     @JsonInclude(JsonInclude.Include.ALWAYS)
     private String message;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonInclude(JsonInclude.Include.NON_NULL)//jodi data ti empty na hoi tahole dekhabe.
     private Object content;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private int numberOfElement;

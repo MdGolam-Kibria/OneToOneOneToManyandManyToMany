@@ -11,11 +11,9 @@ import java.util.List;
 
 public final class ResponceBuilder {
     private ResponceBuilder() {//jeno kew new diya kono object make korte na pare;
-    }
+    };
 
-    ;
-
-    private static List<ErrorResponceDto> getCustomError(BindingResult result) {
+    private static List<ErrorResponceDto> getCustomError(BindingResult result) {//for validation error.
         List<ErrorResponceDto> dtoList = new ArrayList<>();
         result.getFieldErrors().forEach(fieldError -> {//ami list of error gula ke for each loop er maddhome alada korechi.
             ErrorResponceDto dto = ErrorResponceDto.builder()
@@ -27,6 +25,10 @@ public final class ResponceBuilder {
     }
 
     public static Responce getFailureResponce(BindingResult result, String message) {//for getFailure response
+
+        /*
+        ekhane builder ki setter er kaj korlo????????????????????
+         */
         return Responce.builder()
                 .message(message)
                 .errors(getCustomError(result))//this paramiter my own making method i mean above getCustomError(BindingResult result); method

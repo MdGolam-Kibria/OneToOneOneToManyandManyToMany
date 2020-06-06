@@ -1,4 +1,4 @@
-package com.example.classOneProject.model;
+package com.example.classOneProject.dto;
 
 import lombok.Data;
 

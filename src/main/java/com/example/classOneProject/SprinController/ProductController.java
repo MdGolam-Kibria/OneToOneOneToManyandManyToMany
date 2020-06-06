@@ -40,10 +40,12 @@ public class ProductController {
     public Responce delete(@PathVariable("id") Long id) {
         return productService.delete(id);
     }
+
     @GetMapping(UrlConstraint.ProductManagement.GET)
     public Responce get(@PathVariable("id") Long id) {
         return productService.get(id);
     }
+
     @GetMapping(UrlConstraint.ProductManagement.GET_ALL)
     public Responce getAll() {
         return productService.getAll();

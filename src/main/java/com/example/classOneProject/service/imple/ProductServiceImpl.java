@@ -2,7 +2,7 @@ package com.example.classOneProject.service.imple;
 
 import com.example.classOneProject.dto.ProductDto;
 import com.example.classOneProject.dto.Responce;
-import com.example.classOneProject.model.Product;
+import com.example.classOneProject.dto.Product;
 import com.example.classOneProject.repository.ProductRepositoy;
 import com.example.classOneProject.service.ProductService;
 import com.example.classOneProject.utill.ResponceBuilder;
