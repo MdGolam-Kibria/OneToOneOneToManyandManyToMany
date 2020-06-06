@@ -7,9 +7,7 @@ import com.example.classOneProject.service.ProductService;
 import com.example.classOneProject.utill.ResponceBuilder;
 import com.example.classOneProject.utill.UrlConstraint;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -28,5 +26,26 @@ public class ProductController {
             return ResponceBuilder.getFailureResponce(result, "Bean Binding error");
         }
         return productService.save(productDto);
+    }
+
+    @PutMapping(UrlConstraint.ProductManagement.UPDATE)
+    public Responce update(@PathVariable("id") Long id, @Valid @RequestBody ProductDto productDto, BindingResult result) {
+        if (result.hasErrors()) {
+            return ResponceBuilder.getFailureResponce(result, "Bean Binding error");
+        }
+        return productService.update(id, productDto);
+    }
+
+    @DeleteMapping(UrlConstraint.ProductManagement.DELETE)
+    public Responce delete(@PathVariable("id") Long id) {
+        return productService.delete(id);
+    }
+    @GetMapping(UrlConstraint.ProductManagement.GET)
+    public Responce get(@PathVariable("id") Long id) {
+        return productService.get(id);
+    }
+    @GetMapping(UrlConstraint.ProductManagement.GET_ALL)
+    public Responce getAll() {
+        return productService.getAll();
     }
 }

@@ -5,6 +5,7 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 - learn one to many database mapping.
 - learn many to many database mapping.
 - including all quick test with  @PostConstruct annotation 
+- work with  @JsonIgnore
 -add many to one database mapping.<br/>
 more update comming soon..........
 
