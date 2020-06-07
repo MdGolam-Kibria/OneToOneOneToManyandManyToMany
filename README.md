@@ -9,8 +9,4 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 - add many to one database mapping.<br/>
 - provide Genaric way rest Api Using DTO and Model Mapper on Product Entity.
 - provide Genaric way rest Api Using DTO and Model Mapper
-more update comming soon..........
-
-### A sample ER Diagram for   one to one , one to many , many to one ,  many to many. Database mapping.<br/>
-
-![allDatabaseRelationship](https://user-images.githubusercontent.com/61331272/82706750-4b470c00-9c9c-11ea-8d77-14ea7bf706d6.png)
+more update comming soon.....
