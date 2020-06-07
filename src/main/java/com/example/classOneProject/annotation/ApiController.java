@@ -12,7 +12,8 @@ import java.lang.annotation.Documented;
 @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)
 @Documented
 @RestController//ata je ekta rest controller seta ekhane bollam
-//@CrossOrigin({"GET", "POST", "PUT", "DELETE"})//this is for Cross Origin Resource Sharing (CORS) problem solve
+//@CrossOrigin({"GET", "POST", "PUT", "DELETE"})//this is for Cross Origin Resource Sharing (CORS) problem solve this is one way
+// another way given below
 @CrossOrigin(origins = "*",methods = {RequestMethod.GET,RequestMethod.PUT,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.OPTIONS})
 @ResponseBody
 public @interface ApiController {

@@ -8,5 +8,12 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 - work with  @JsonIgnore
 - add many to one database mapping.<br/>
 - provide Genaric way rest Api Using DTO and Model Mapper on Product Entity.
-- provide Genaric way rest Api Using DTO and Model Mapper
+- provide Genaric way rest Api Using DTO and Model Mapper<br/>
+##learn about<br/>
+- @MappedSuperclass.
+- @PrePersist.
+- @PreUpdate
+- @Builder
+- @JsonInclude(JsonInclude.Include.ALWAYS).
+- @JsonInclude(JsonInclude.Include.NON_NULL).
 more update comming soon.....
