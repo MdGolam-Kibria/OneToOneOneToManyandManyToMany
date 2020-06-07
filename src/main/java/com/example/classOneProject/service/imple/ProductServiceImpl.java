@@ -89,7 +89,7 @@ public class ProductServiceImpl implements ProductService {
         List<ProductDto> productDtos = new ArrayList<>();
         products.forEach(product -> {
             modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
-           ProductDto productDto =  modelMapper.map(product,ProductDto.class);
+            ProductDto productDto =  modelMapper.map(product,ProductDto.class);
             productDtos.add(productDto);
         });
         return productDtos;
