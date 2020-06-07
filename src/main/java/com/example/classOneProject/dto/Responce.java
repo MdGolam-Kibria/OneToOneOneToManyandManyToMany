@@ -17,7 +17,7 @@ public class Responce {//amer server e ki ki responce thakte pare seta ekhane re
     private String status;
     @JsonInclude(JsonInclude.Include.ALWAYS)
     private String message;
-    @JsonInclude(JsonInclude.Include.NON_NULL)//jodi data ti empty na hoi tahole dekhabe.
+    @JsonInclude(JsonInclude.Include.NON_NULL)//jodi data ti NON_NULL na hoi tahole dekhabe.
     private Object content;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private int numberOfElement;
