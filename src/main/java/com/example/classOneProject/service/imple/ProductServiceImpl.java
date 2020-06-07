@@ -85,7 +85,7 @@ public class ProductServiceImpl implements ProductService {
         return ResponceBuilder.getSuccessResponce(HttpStatus.OK, root + " retrieved Successfully",productDtos);
     }
 
-    private List<ProductDto> getProducts(List<Product> products) {
+    private List<ProductDto> getProducts(List<Product> products) {//DTO dara data dissi getAll method ke ei method dara
         List<ProductDto> productDtos = new ArrayList<>();
         products.forEach(product -> {
             modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
