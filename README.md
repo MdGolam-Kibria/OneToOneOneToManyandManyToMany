@@ -24,11 +24,11 @@ in this repository cover one to one, one to many, many to one, one to many ,many
     - Add custom generic way spring security.<br/>
     - protection against cors problem<br/>
     - and add protection csrf problems<br/>
-          <b>About csrf </b><br/>
-          CSRF stands for Cross-Site Request Forgery. It is an attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.<br/>
+          <b>About CSRF </b><br/>
+          CSRF stands for <b>Cross-Site Request Forgery(জালিয়াতি)<b/>. It is an attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.<br/>
 -Add  protection cors protection<br/>
-    <b>About csrf </b><br/>
-          Cross-Origin Resource Sharing (CORS) is a security concept that allows restricting the resources implemented in web browsers. It prevents the JavaScript code producing or consuming the requests against different origin
+    <b>About CORS </b><br/>
+          <b>Cross-Origin Resource Sharing</b> (CORS) is a security concept that allows restricting the resources implemented in web browsers. It prevents the JavaScript code producing or consuming the requests against different origin
 
 For example, your web application is running on 8080 port and by using JavaScript you are trying to consuming RESTful web services from 9090 port. Under such situations, you will face the Cross-Origin Resource Sharing security issue on your web browsers.
 
