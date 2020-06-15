@@ -19,4 +19,11 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 - setRootUrl using application.properties.
 - Model mapper
 - DTO concept.<br/>
+
+###Add generic way spring security with disable csrf and cors problem
+    - Add custom generic way spring security.
+    - protection against cors problem
+    - and add protection csrf problems
+          <b>About csrf </b><br/>
+          CSRF stands for Cross-Site Request Forgery. It is an attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.<br/>
 more update comming soon.....
