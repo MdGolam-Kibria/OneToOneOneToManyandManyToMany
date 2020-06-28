@@ -18,6 +18,7 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 - @JsonInclude(JsonInclude.Include.NON_NULL).
 - setRootUrl using application.properties.
 - Model mapper
+- implement <b> JWT </b> token....
 - DTO concept.<br/>
 
 ###Add generic way <b>SPRING SECURITY </b>with disable csrf and cors problem.<br/>
