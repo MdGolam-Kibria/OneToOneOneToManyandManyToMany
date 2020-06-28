@@ -17,7 +17,7 @@ public class UserPrinciple implements UserDetails {
     private String username;
     @JsonIgnore
     private String password;
-    private Collection<? extends GrantedAuthority> authorities;
+    private Collection<? extends GrantedAuthority> authorities;//role
 
     public UserPrinciple(Long id, String username, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
@@ -25,8 +25,10 @@ public class UserPrinciple implements UserDetails {
         this.password = password;
         this.authorities = authorities;
     }
-
-    public static UserPrinciple create(User user){
+/*
+mechanism for make user to user principal so .......
+ */
+    public static UserPrinciple create(User user){//mechanism for make user to user principal
         try {
             List<GrantedAuthority> authorities = user.getRoles().stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
             return new UserPrinciple(user.getId(), user.getUsername(), user.getPassword(), authorities);
@@ -38,36 +40,36 @@ public class UserPrinciple implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return authorities;
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }

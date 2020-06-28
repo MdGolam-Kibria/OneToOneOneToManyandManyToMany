@@ -25,7 +25,7 @@ public class MyAuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
 
     @Override
     public void afterPropertiesSet() {
-        setRealmName("springBootTutorial");
+        setRealmName("springBootTutorial");//why add here???????
         super.afterPropertiesSet();
     }
 }

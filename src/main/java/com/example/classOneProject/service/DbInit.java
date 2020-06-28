@@ -29,7 +29,7 @@ public class DbInit {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @PostConstruct
+    //@PostConstruct
     public void init() {
 
 

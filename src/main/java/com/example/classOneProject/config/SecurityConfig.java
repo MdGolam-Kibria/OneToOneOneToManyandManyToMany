@@ -1,7 +1,8 @@
 package com.example.classOneProject.config;
 
-import com.example.classOneProject.filter.CustomFilter;
+import com.example.classOneProject.filter.JwtAuthenticationFilter;
 import com.example.classOneProject.service.imple.CustomUserDetailsService;
+import com.example.classOneProject.utill.UrlConstraint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,13 +21,13 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
     private final CustomUserDetailsService customUserDetailsService;
     private final PasswordEncoder passwordEncoder;
     private final MyAuthenticationEntryPoint myAuthenticationEntryPoint;
-    private final CustomFilter customFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    public SecurityConfig(CustomUserDetailsService customUserDetailsService, PasswordEncoder passwordEncoder, MyAuthenticationEntryPoint myAuthenticationEntryPoint, CustomFilter customFilter) {
+    public SecurityConfig(CustomUserDetailsService customUserDetailsService, PasswordEncoder passwordEncoder, MyAuthenticationEntryPoint myAuthenticationEntryPoint, JwtAuthenticationFilter jwtAuthenticationFilter) {
         this.customUserDetailsService = customUserDetailsService;
         this.passwordEncoder = passwordEncoder;
         this.myAuthenticationEntryPoint = myAuthenticationEntryPoint;
-        this.customFilter = customFilter;
+        this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
 
     @Override
@@ -53,11 +54,11 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/", "/login")
+                .antMatchers(UrlConstraint.AuthManagement.ROOT+allPrefix)
                 .permitAll()
 //                .antMatchers("/jdhhd").hasAnyRole("", "")
                 .anyRequest()
                 .authenticated();
-        http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }

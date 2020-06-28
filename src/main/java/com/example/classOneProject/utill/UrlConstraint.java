@@ -15,4 +15,8 @@ public final class UrlConstraint {
         public static final String GET = "/{id}";
         public static final String GET_ALL = "/all";
     }
+    public static class AuthManagement {
+        public static final String ROOT = API + "/auth";
+        public static final String LOGIN = "/login";
+    }
 }
