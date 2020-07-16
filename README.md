@@ -18,6 +18,15 @@ in this repository cover one to one, one to many, many to one, one to many ,many
 - @JsonInclude(JsonInclude.Include.NON_NULL).
 - setRootUrl using application.properties.
 - Model mapper
+- implement <b> JWT </b> token....<br/>
+```Java
+ ES512 which uses (Elliptic Curve algorithm). Since you are using a secret key, you want to use an HMAC algorithm which has the prefix "HS". So HS256, HS384, or HS512.
+        *if you use a secrect key 🗝 use "HS512" like....
+                Jwts.builder().setClaims(claim).signWith(SignatureAlgorithm.HS512, secret).compact();//without any secrect key.
+                
+        *If you don't have any secrect key then use the below algorithm 
+                Jwts.builder().setClaims(claim).signWith(SignatureAlgorithm.ES512, secret).compact();// For Cecret key.
+```
 - DTO concept.<br/>
 
 ###Add generic way <b>SPRING SECURITY </b>with disable csrf and cors problem.<br/>
