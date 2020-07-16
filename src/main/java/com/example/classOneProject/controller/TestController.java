@@ -1,7 +1,5 @@
-package com.example.classOneProject.SprinController;
+package com.example.classOneProject.controller;
 
-import com.example.classOneProject.model.Address;
-import com.example.classOneProject.model.Employee;
 import com.example.classOneProject.repository.AddressRepository;
 import com.example.classOneProject.repository.EmployeeRepository;
 import org.springframework.stereotype.Controller;
@@ -9,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.annotation.PostConstruct;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

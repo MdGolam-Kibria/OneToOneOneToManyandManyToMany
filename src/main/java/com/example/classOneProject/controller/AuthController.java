@@ -1,4 +1,4 @@
-package com.example.classOneProject.SprinController;
+package com.example.classOneProject.controller;
 
 import com.example.classOneProject.annotation.ApiController;
 import com.example.classOneProject.dto.LoginDto;

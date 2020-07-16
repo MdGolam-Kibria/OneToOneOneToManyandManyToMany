@@ -1,6 +1,7 @@
-package com.example.classOneProject.SprinController;
+package com.example.classOneProject.controller;
 
 import com.example.classOneProject.annotation.ApiController;
+import com.example.classOneProject.annotation.ValidateData;
 import com.example.classOneProject.dto.ProductDto;
 import com.example.classOneProject.dto.Responce;
 import com.example.classOneProject.service.ProductService;
@@ -21,18 +22,20 @@ public class ProductController {
     }
 
     @PostMapping(UrlConstraint.ProductManagement.CREATE)
+    @ValidateData
     public Responce create(@Valid @RequestBody ProductDto productDto, BindingResult result) {
-        if (result.hasErrors()) {
-            return ResponceBuilder.getFailureResponce(result, "Bean Binding error");
-        }
+//        if (result.hasErrors()) {
+//            return ResponceBuilder.getFailureResponce(result, "Bean Binding error");
+//        }
         return productService.save(productDto);
     }
 
     @PutMapping(UrlConstraint.ProductManagement.UPDATE)
+    @ValidateData
     public Responce update(@PathVariable("id") Long id, @Valid @RequestBody ProductDto productDto, BindingResult result) {
-        if (result.hasErrors()) {
-            return ResponceBuilder.getFailureResponce(result, "Bean Binding error");
-        }
+//        if (result.hasErrors()) {
+//            return ResponceBuilder.getFailureResponce(result, "Bean Binding error");
+//        }
         return productService.update(id, productDto);
     }
 
