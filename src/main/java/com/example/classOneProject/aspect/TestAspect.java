@@ -1,7 +1,6 @@
 package com.example.classOneProject.aspect;
 
 import com.example.classOneProject.dto.Responce;
-import com.example.classOneProject.dto.UserPrinciple;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -11,10 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.servlet.http.HttpServletRequest;
-import java.security.Principal;
 
 @Aspect
 @Configuration
@@ -42,6 +39,7 @@ public class TestAspect {
             logger.info(joinPoint.getSignature().getDeclaringTypeName());//for get packageName
             logger.info(joinPoint.getSignature().getName());//for get methodName
             logger.info(joinPoint.getTarget().getClass().getSimpleName());//for get for get class nane
+            logger.info("SIGNATURE = "+joinPoint.getSignature());
             /*
             why here print "anonymousUser"
              */

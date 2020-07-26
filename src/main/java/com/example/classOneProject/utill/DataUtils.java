@@ -23,6 +23,6 @@ public final class DataUtils {
     public static Date getExpirationTime(Long expireHours){
         Date now = new Date();
         Long expireInMilis = TimeUnit.HOURS.toMillis(expireHours);
-        return new Date(expireHours + now.getTime());
+        return new Date(expireInMilis + now.getTime());
     }
 }
