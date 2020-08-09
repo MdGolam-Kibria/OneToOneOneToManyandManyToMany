@@ -47,5 +47,6 @@ Two requirements are needed to handle this issue −
 
 RESTful web services should support the Cross-Origin Resource Sharing.
 
-RESTful web service application should allow accessing the API(s) from the 8080 port.<br/>
+RESTful web service application should allow accessing the API
+Calss finished (s) from the 8080 port.<br/>
 more update comming soon.....
